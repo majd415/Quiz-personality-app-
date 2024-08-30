@@ -41,25 +41,25 @@ class Language extends GetView<LocalControler> {
             ),
             const SizedBox(height: 20,),
 
-            SingleChildScrollView(
-              scrollDirection:  Axis.horizontal,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-
-                children: [
-                  Container(
-                    width: screenWidth > 600?300:350,
-
-                    child: CustomBottonLang(textbutton: "En",
-                      onPressed: (){
-                        controller.changeLang("en");
-                        Get.toNamed(AppRoute.onboarding);
-
-                      },),
-                  ),
-                ],
-              ),
-            )
+            // SingleChildScrollView(
+            //   scrollDirection:  Axis.horizontal,
+            //   child: Row(
+            //     mainAxisAlignment: MainAxisAlignment.center,
+            //
+            //     children: [
+            //       Container(
+            //         width: screenWidth > 600?300:350,
+            //
+            //         child: CustomBottonLang(textbutton: "En",
+            //           onPressed: (){
+            //             controller.changeLang("en");
+            //             Get.toNamed(AppRoute.onboarding);
+            //
+            //           },),
+            //       ),
+            //     ],
+            //   ),
+            // )
           ],
         ),
       ) ,

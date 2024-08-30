@@ -19,78 +19,85 @@ class VerifyCodeSignUp extends StatelessWidget {
     final screenWidth = Get.context!.width;
 
     return Scaffold(
-      body: GetBuilder<VerifyCodeSignUpControllerImp>(
-        builder: (controller) => controller.statusRequest ==
-                StatusRequest.loading
-            ? const Center(
-                child: CircularProgressIndicator(),
-              )
-            : Container(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 20, horizontal: 35),
-                child: ListView(
-                  children: [
-                    const SizedBox(
-                      height: 20,
-                    ),
-                     CustomTextTitleAuth(title: '51'.tr),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    CustomTextBodyAuth(
-                        text:
-                        "${'52'.tr}  ${controller.email}"),
-                    const SizedBox(
-                      height: 65,
-                    ),
+      body: Directionality(
+        textDirection: TextDirection.ltr,
+        child: GetBuilder<VerifyCodeSignUpControllerImp>(
+          builder: (controller) => controller.statusRequest ==
+                  StatusRequest.loading
+              ? const Center(
+                  child: CircularProgressIndicator(),
+                )
+              : Container(
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 20, horizontal: 35),
+                  child: ListView(
+                    children: [
+                      const SizedBox(
+                        height: 20,
+                      ),
+                       CustomTextTitleAuth(title: '51'.tr),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      CustomTextBodyAuth(
+                          text:
+                          "${'52'.tr}  ${controller.email}"),
+                      const SizedBox(
+                        height: 65,
+                      ),
 
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
-                 width:   screenWidth > 600?500:350,
-                          child: OtpTextField(
-                            fieldWidth: 50.0,
-                            borderRadius: BorderRadius.circular(20),
-                            numberOfFields: 5,
+                      SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
 
-                            borderColor: const Color(0xFF9F9BA3),
-                          //set to true to show as box or false to show as dash
-                            showFieldAsBox: true,
-                          //runs when a code is typed in
-                            onCodeChanged: (String code) {
-                          //handle validation or checks here
-                            },
-                          //runs when every textfield is filled
-                            onSubmit: (String verificationCode) {
-                              controller.goToSuccessSignUp(verificationCode);
-                            }, // end onSubmit
-                          ),
-                        ),
-                      ],
-                    ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Container(
+                                           width:   screenWidth > 600?500:350,
+                              child: OtpTextField(
+                                fieldWidth: 50.0,
+                                borderRadius: BorderRadius.circular(20),
+                                numberOfFields: 5,
 
-//  CustomButtomAuth(text: "Check",onPressed: (){}),
-                    const SizedBox(
-                      height: 30,
-                    ),
-                    InkWell(
-                      onTap: () {
-                        controller.resend();
-                      },
-                      child: Center(
-                        child: Text(
-                          '53'.tr,
-                          style: TextStyle(
-                            color: Color.fromRGBO(22, 217, 227, 1),
-                            fontSize: 20,
-                          ),
+                                borderColor: const Color(0xFF9F9BA3),
+                              //set to true to show as box or false to show as dash
+                                showFieldAsBox: true,
+                              //runs when a code is typed in
+                                onCodeChanged: (String code) {
+                              //handle validation or checks here
+                                },
+                              //runs when every textfield is filled
+                                onSubmit: (String verificationCode) {
+                                  controller.goToSuccessSignUp(verificationCode);
+                                }, // end onSubmit
+                              ),
+                            ),
+                          ],
                         ),
                       ),
-                    )
-                  ],
+
+        //  CustomButtomAuth(text: "Check",onPressed: (){}),
+                      const SizedBox(
+                        height: 30,
+                      ),
+                      InkWell(
+                        onTap: () {
+                          controller.resend();
+                        },
+                        child: Center(
+                          child: Text(
+                            '53'.tr,
+                            style: TextStyle(
+                              color: Color.fromRGBO(22, 217, 227, 1),
+                              fontSize: 20,
+                            ),
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
                 ),
-              ),
+        ),
       ),
     );
   }

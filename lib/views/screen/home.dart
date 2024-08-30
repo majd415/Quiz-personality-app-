@@ -84,7 +84,7 @@ class Home extends StatelessWidget {
                   InkWell(
                     onTap: (){
                       // in controller for add argument from home
-                      Get.toNamed(AppRoute.testScreen);
+                      Get.toNamed(AppRoute.payScreen);
                     },
                     child: Container(
                       alignment: Alignment.center,
@@ -180,7 +180,8 @@ class Home extends StatelessWidget {
                                       mainAxisAlignment: MainAxisAlignment.center,
                                       crossAxisAlignment: CrossAxisAlignment.center,
                                       children: [
-                                        Text("${controller.results[index]["results_percentage"]} %",
+                                        // ${controller.results[index]["results_percentage"]} %
+                                        Text("70".tr,
                                           style: TextStyle(
                                               color: Colors.black,
                                               fontWeight: FontWeight.bold,

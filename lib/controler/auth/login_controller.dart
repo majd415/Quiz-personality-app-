@@ -70,7 +70,7 @@ class LoginControllerImp extends LoginController {
 
             Get.offNamed(AppRoute.home);
           } else {
-            Get.toNamed(AppRoute.verifycodesignup, arguments: {
+            Get.offNamed(AppRoute.verifycodesignup, arguments: {
               "email": email.text,
             });
           }

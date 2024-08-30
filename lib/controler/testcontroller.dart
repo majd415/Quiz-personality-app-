@@ -279,7 +279,7 @@ print("percentLongestList${percentLongestList}");
               addResultToDatabase();
               /////////
               getpaypaldatacontroller();
-              Get.toNamed(AppRoute.payScreen,arguments: {
+              Get.toNamed(AppRoute.result,arguments: {
                   "finalResult":finalResult,
                   "finalResultPercentage":finalResultPercentage,
                 "papalInfo":listpaypaldata

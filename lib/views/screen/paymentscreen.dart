@@ -182,7 +182,7 @@ class PayScreen extends StatelessWidget {
                                      Center(
                                       child: TextButton(
                                         onPressed: () async {
-                                          controller.goptoresult();
+                                          controller.gototestscreen();
                                           // Get.toNamed(AppRoute.paypalWebview);
                                         },
                                         style: TextButton.styleFrom(

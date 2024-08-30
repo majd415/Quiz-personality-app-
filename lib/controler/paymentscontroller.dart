@@ -16,7 +16,7 @@ class PaymentsControllerImp extends PaymentsController {
   Peymentsdata peymentsdata = Peymentsdata(Get.find());
   MysServices mysServices = Get.find();
   GlobalKey<FormState> formStatepayments = GlobalKey<FormState>();
-  late Map  paymentInfo={};
+  // late Map  paymentInfo={};
 
   late double copon=0;
   late double totalAmoun;
@@ -24,8 +24,8 @@ class PaymentsControllerImp extends PaymentsController {
   List datacopn = [];
   List dataamount = [];
 List dataPaypal=[];
-  late List<String> finalResultList;
-  late List<double> finalResultPercentageList = [];
+  // late List<String> finalResultList;
+  // late List<double> finalResultPercentageList = [];
 
 
 
@@ -81,9 +81,9 @@ List dataPaypal=[];
   void onInit() async {
     statusRequest = StatusRequest.loading;
     codediscount = TextEditingController();
-    finalResultList = Get.arguments["finalResult"];
-    finalResultPercentageList = Get.arguments["finalResultPercentage"];
-    dataPaypal=Get.arguments["papalInfo"];
+    // finalResultList = Get.arguments["finalResult"];
+    // finalResultPercentageList = Get.arguments["finalResultPercentage"];
+    // dataPaypal=Get.arguments["papalInfo"];
     await getamountpay();
 
 
@@ -127,14 +127,15 @@ List dataPaypal=[];
         note: "Contact us for any questions on your order.",
         onSuccess: (Map params) async {
           print("onSuccess: $params");
-          paymentInfo=params;
-          addPeymentToDatabase();
+          // paymentInfo=params;
+          // addPeymentToDatabase();
           await Future.delayed(Duration(milliseconds: 500));
           // إضافة تأخير لتجنب التحطم
-          Get.offNamed(AppRoute.result, arguments: {
-            "finalResult": finalResultList,
-            "finalResultPercentage": finalResultPercentageList,
-          });
+          // Get.offNamed(AppRoute.result, arguments: {
+          //   "finalResult": finalResultList,
+          //   "finalResultPercentage": finalResultPercentageList,
+          // });
+          Get.toNamed(AppRoute.testScreen);
         },
         onError: (error) {
           print("onError: $error");
@@ -146,57 +147,60 @@ List dataPaypal=[];
       ),
     );
   }
-  addPeymentToDatabase() async {
-    try {
-      statusRequest = StatusRequest.loading;
-      update();
-      var transactions = paymentInfo['data']['transactions'];
-      var payerInfo = paymentInfo['data']['payer']['payer_info'];
-      if (transactions != null && transactions.isNotEmpty && payerInfo != null) {
-        var amount = transactions[0]['amount']['total'].toString();
-        var message = paymentInfo['message'].toString();
-        statusRequest = StatusRequest.loading;
-        update();
+  // addPeymentToDatabase() async {
+  //   try {
+  //     statusRequest = StatusRequest.loading;
+  //     update();
+  //     var transactions = paymentInfo['data']['transactions'];
+  //     var payerInfo = paymentInfo['data']['payer']['payer_info'];
+  //     if (transactions != null && transactions.isNotEmpty && payerInfo != null) {
+  //       var amount = transactions[0]['amount']['total'].toString();
+  //       var message = paymentInfo['message'].toString();
+  //       statusRequest = StatusRequest.loading;
+  //       update();
+  //
+  //       var response = await peymentsdata.addPayments(
+  //         mysServices.sharedPreferences.getString("id")!,
+  //         amount,
+  //         message,
+  //       );
+  //
+  //       statusRequest = handlingData(response);
+  //
+  //       if (StatusRequest.success == statusRequest) {
+  //         if (response['status'] == "success") {
+  //           print("Payments added to the database successfully.");
+  //         }
+  //       } else {
+  //         statusRequest = StatusRequest.failure;
+  //       }
+  //       update();
+  //     } else {
+  //       print("Error: Invalid paymentInfo structure.");
+  //     }
+  //   }catch (e) {
+  //     print("Exception in addPeymentToDatabase: $e");
+  //     statusRequest = StatusRequest.failure;
+  //     update();
+  //   }
+  //
+  // }
 
-        var response = await peymentsdata.addPayments(
-          mysServices.sharedPreferences.getString("id")!,
-          amount,
-          message,
-        );
-
-        statusRequest = handlingData(response);
-
-        if (StatusRequest.success == statusRequest) {
-          if (response['status'] == "success") {
-            print("Payments added to the database successfully.");
-          }
-        } else {
-          statusRequest = StatusRequest.failure;
-        }
-        update();
-      } else {
-        print("Error: Invalid paymentInfo structure.");
-      }
-    }catch (e) {
-      print("Exception in addPeymentToDatabase: $e");
-      statusRequest = StatusRequest.failure;
-      update();
-    }
-
+// goptoresult(){
+//   Get.offNamed(AppRoute.result, arguments: {
+//     "finalResult": finalResultList,
+//     "finalResultPercentage": finalResultPercentageList,
+//   });
+// }
+  gototestscreen(){
+    Get.toNamed(AppRoute.testScreen);
   }
-
-goptoresult(){
-  Get.offNamed(AppRoute.result, arguments: {
-    "finalResult": finalResultList,
-    "finalResultPercentage": finalResultPercentageList,
-  });
-}
   @override
   void onClose() {
     super.onClose();
   }
 }
-/////
+///
 
 
 
@@ -205,7 +209,7 @@ goptoresult(){
 
 
 
-
+//
 // import 'package:flutter/material.dart';
 // import 'package:flutter_paypal_sdk/flutter_paypal_sdk.dart';
 // import 'package:get/get.dart';

@@ -12,8 +12,8 @@ class MyTranslations extends Translations{
       "5": "الحساب",
       "6": "ابدأ اختبار صفاتك",
       "7": "ابدأ",
-      "8": "احصائيات اخر الاختبارات",
-      "9": "قم بإجراء أول اختبار لعرض الاحصائيات",
+      "8": "  نتيجة الاختبار ",
+      "9": "قم بإجراء أول اختبار لعرض النتيجة",
       "10": "تواصل معنا",
       "11": "الاسم",
       "12": "رقم الهاتف",
@@ -67,13 +67,14 @@ class MyTranslations extends Translations{
       "60":"مرحبًا بك في تطبيق اختبار شخصية المستخدم",
       "61":"اكتشف شخصيتك واحصل على تحليل دقيق لسلوكك وتفضيلاتك",
       "62":"تعرف على نفسك من جديد وابداء باختبار شخصيتك الان",
-      "63":"المسيطر",
-      "64":"المؤثر",
-      "65":"المستقر",
-      "66":"الحذر",
-      "67":"احصل على النتيجة"
-
-
+      "63":"  Dominant \n D\n المسيطر",
+      "64":"I\n Influencer \n المؤثر",
+      "65":"S \n Steady \n المستقر",
+      "66":"C \n Cautious  \n الحذر",
+      "67":"ادخل الى الاختبار  ",
+      "68": "كود التحقق",
+"69":"ادخل الرمز الذي تم ارسالة الى البريد الاكتروني الذي قمت باضافتة ",
+  "70":"نتيجتك هي  "
 
 
     },
@@ -85,8 +86,8 @@ class MyTranslations extends Translations{
       "5": "Account",
       "6": "Start your traits test",
       "7": "Start",
-      "8": "Last test statistics",
-      "9": "Take the first test to display statistics",
+      "8": " Test Result",
+      "9": "Take the first Test To Display  Result",
       "10": "Contact us",
       "11": "Name",
       "12": "Phone number",
@@ -145,12 +146,14 @@ class MyTranslations extends Translations{
       ,
       "62":"Get to know yourself again and start your personality test now",
 
-  "63": "Dominant",
-  "64": "Influencer",
-  "65": "Steady",
-  "66": "Cautious",
-  "67":"get result"
-
+  "63": "Dominant\n D",
+  "64": "Influencer\n I",
+  "65": "Steady\n S",
+  "66": "Cautious\n C",
+  "67":"Go to test ",
+      "68":"Code",
+"69":"add code that we send it to your email ",
+    "70":"Result Is"
 
 
 
