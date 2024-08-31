@@ -1,4 +1,4 @@
-// import 'package:audioplayers/audioplayers.dart';
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
@@ -24,7 +24,7 @@ class ResultControllerImp extends ResultController{
 
  late double progress ;
 
- // late AudioPlayer audioPlayer;
+ late AudioPlayer audioPlayer;
 late StatusRequest statusRequest;
  MysServices mysServices=Get.find();
 late ShowFitures showFitures=ShowFitures(Get.find());
@@ -56,11 +56,11 @@ getfituresfunc()async{
 
 
  void playAudio() async {
-   // await audioPlayer.play(AssetSource('sounds/result.wav'));
+   await audioPlayer.play(AssetSource('sounds/result.wav'));
  }
 
  void stopAudio() async {
-   // await audioPlayer.stop();
+   await audioPlayer.stop();
  }
   @override
   onInit() async {
@@ -72,7 +72,7 @@ getfituresfunc()async{
 
 
 
-  // audioPlayer = AudioPlayer();
+  audioPlayer = AudioPlayer();
     playAudio();
   // addResultToDatabase();
     update();
@@ -426,7 +426,7 @@ getfituresfunc()async{
  @override
  void onClose() {
    stopAudio();
-   // audioPlayer.dispose();
+   audioPlayer.dispose();
    super.onClose();
  }
 
