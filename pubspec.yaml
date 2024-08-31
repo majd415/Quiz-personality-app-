@@ -88,7 +88,7 @@ dependencies:
   #slider
   another_carousel_pro: ^1.0.2
   #audio
-  audioplayers: ^5.2.1
+#  audioplayers: ^5.2.1
   percent_indicator: ^4.2.3
 
   #pdf

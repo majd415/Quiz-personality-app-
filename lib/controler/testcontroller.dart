@@ -1,5 +1,5 @@
 
-import 'package:audioplayers/audioplayers.dart';
+// import 'package:audioplayers/audioplayers.dart';
 import 'package:get/get.dart';
 
 import '../core/class/statusrequest.dart';
@@ -46,7 +46,7 @@ class TestAppControllerImp extends TestAppController {
   late int ind;
 
 
-  late AudioPlayer audioPlayer;
+  // late AudioPlayer audioPlayer;
    addperResult(index)async{
     if (ind!=-1){
       if (index < 0 || index >= listdata.length) {
@@ -313,11 +313,11 @@ print("percentLongestList${percentLongestList}");
     update();
   }
   void playAudio() async {
-    await audioPlayer.play(AssetSource('sounds/Meditating.wav'));
+    // await audioPlayer.play(AssetSource('sounds/Meditating.wav'));
   }
 
   void stopAudio() async {
-    await audioPlayer.stop();
+    // await audioPlayer.stop();
   }
     nextAnsware() {
     groupAnswar++;
@@ -359,16 +359,16 @@ print(listpaypaldata);
     listdataPerD.clear();
     finalResult.clear();
     finalResultPercentage.clear();
-    audioPlayer = AudioPlayer();
+    // audioPlayer = AudioPlayer();
     playAudio();
-    audioPlayer.setReleaseMode(ReleaseMode.loop);  // ضبط التكرار التلقائي
+    // audioPlayer.setReleaseMode(ReleaseMode.loop);  // ضبط التكرار التلقائي
 
     super.onInit();
   }
   @override
   void onClose() {
     stopAudio();
-    audioPlayer.dispose();
+    // audioPlayer.dispose();
     super.onClose();
   }
 
