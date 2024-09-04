@@ -21,6 +21,7 @@ class ResultControllerImp extends ResultController{
 
  late List<String> finalResultList;
  late List<double> finalResultPercentageList=[];
+ late List<String> finalResultLink = [];
 
  late double progress ;
 
@@ -68,7 +69,9 @@ getfituresfunc()async{
     await   getfituresfunc();
       finalResultList = Get.arguments["finalResult"];
       finalResultPercentageList = Get.arguments["finalResultPercentage"];
-      update();
+  finalResultLink = Get.arguments["finalResultLink"];
+
+  update();
 
 
 
@@ -82,335 +85,333 @@ getfituresfunc()async{
 
 
  openNegativePdf(){
-   if(finalResultList[0]=="63".tr ){
+   if(finalResultLink[0]=="المسيطر" ){
      if (Get.locale?.languageCode == 'ar'){
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/negantiveAR.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/negantiveAR.pdf');
 
 
      }else{
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/negantiveEN.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/negantiveEN.pdf');
 
      }
 
 
 
    }
-   else if(finalResultList[0]=="64".tr){
+   else if(finalResultLink[0]=="المؤثر"){
      if (Get.locale?.languageCode == 'ar'){
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/negantiveAR.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/negantiveAR.pdf');
 
      }else{
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/negantiveEN.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/negantiveEN.pdf');
 
      }
 
    }
-   else if(finalResultList[0]=="65".tr){
+   else if(finalResultLink[0]=="المستقر"){
      if (Get.locale?.languageCode == 'ar'){
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/negantiveAR.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/negantiveAR.pdf');
 
      }else{
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/negantiveEN.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/negantiveEN.pdf');
 
      }
 
    }
-   else if(finalResultList[0]=="66".tr){
+   else if(finalResultLink[0]=="الحذر"){
      if (Get.locale?.languageCode == 'ar'){
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/negantiveAR.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/negantiveAR.pdf');
 
      }else{
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/negantiveEN.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/negantiveEN.pdf');
 
      }
 
    }
-   else if(finalResultList[0]=="DI"){
+   else if(finalResultLink[0]=="DI"){
      if (Get.locale?.languageCode == 'ar'){
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/negantiveAR.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/negantiveAR.pdf');
 
      }else{
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/negantiveEN.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/negantiveEN.pdf');
 
      }
 
    }
-   else if(finalResultList[0]=="DS"){
+   else if(finalResultLink[0]=="DS"){
      if (Get.locale?.languageCode == 'ar'){
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/negantiveAR.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/negantiveAR.pdf');
 
      }else{
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/negantiveEN.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/negantiveEN.pdf');
 
      }
 
    }
-   else if(finalResultList[0]=="DC"){
+   else if(finalResultLink[0]=="DC"){
      if (Get.locale?.languageCode == 'ar'){
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/negantiveAR.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/negantiveAR.pdf');
 
      }else{
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/negantiveEN.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/negantiveEN.pdf');
 
      }
 
    }
-   else if(finalResultList[0]=="ID"){
+   else if(finalResultLink[0]=="ID"){
      if (Get.locale?.languageCode == 'ar'){
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/negantiveAR.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/negantiveAR.pdf');
 
      }else{
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/negantiveEN.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/negantiveEN.pdf');
 
      }
 
    }
-   else if(finalResultList[0]=="IS"){
+   else if(finalResultLink[0]=="IS"){
      if (Get.locale?.languageCode == 'ar'){
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/negantiveAR.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/negantiveAR.pdf');
 
      }else{
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/negantiveEN.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/negantiveEN.pdf');
 
      }
 
    }
-   else if(finalResultList[0]=="IC"){
+   else if(finalResultLink[0]=="IC"){
      if (Get.locale?.languageCode == 'ar'){
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/negantiveAR.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/negantiveAR.pdf');
 
      }else{
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/negantiveEN.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/negantiveEN.pdf');
 
      }
 
    }
-   else if(finalResultList[0]=="SD"){
+   else if(finalResultLink[0]=="SD"){
      if (Get.locale?.languageCode == 'ar'){
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/negantiveAR.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/negantiveAR.pdf');
 
      }else{
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/negantiveEN.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/negantiveEN.pdf');
 
      }
 
    }
-   else if(finalResultList[0]=="SI"){
+   else if(finalResultLink[0]=="SI"){
      if (Get.locale?.languageCode == 'ar'){
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/negantiveAR.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/negantiveAR.pdf');
 
      }else{
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/negantiveEN.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/negantiveEN.pdf');
 
      }
 
    }
-   else if(finalResultList[0]=="SC"){
+   else if(finalResultLink[0]=="SC"){
      if (Get.locale?.languageCode == 'ar'){
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/negantiveAR.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/negantiveAR.pdf');
 
      }else{
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/negantiveEN.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/negantiveEN.pdf');
 
      }
 
    }
-   else if(finalResultList[0]=="CD"){
+   else if(finalResultLink[0]=="CD"){
      if (Get.locale?.languageCode == 'ar'){
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/negantiveAR.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/negantiveAR.pdf');
 
      }else{
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/negantiveEN.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/negantiveEN.pdf');
 
      }
 
    }
-   else if(finalResultList[0]=="CI"){
+   else if(finalResultLink[0]=="CI"){
      if (Get.locale?.languageCode == 'ar'){
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/negantiveAR.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/negantiveAR.pdf');
 
      }else{
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/negantiveEN.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/negantiveEN.pdf');
 
      }
 
    }
-   else if(finalResultList[0]=="CS"){
+   else if(finalResultLink[0]=="CS"){
      if (Get.locale?.languageCode == 'ar'){
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/negantiveAR.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/negantiveAR.pdf');
 
      }else{
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/negantiveEN.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/negantiveEN.pdf');
 
      }
 
    }
 
  }
+
  openPositevPdf(){
-   if(finalResultList[0]=="63".tr ){
+   if(finalResultLink[0]=="المسيطر" ){
      if (Get.locale?.languageCode == 'ar'){
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/positiveAR.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/positiveAR.pdf');
 
      }else{
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/positiveEN.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/positiveEN.pdf');
 
      }
 
 
 
    }
-   else if(finalResultList[0]=="64".tr){
+   else if(finalResultLink[0]=="المؤثر"){
      if (Get.locale?.languageCode == 'ar'){
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/positiveAR.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/positiveAR.pdf');
 
      }else{
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/positiveEN.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/positiveEN.pdf');
 
      }
 
    }
-   else if(finalResultList[0]=="65".tr){
+   else if(finalResultLink[0]=="المستقر"){
      if (Get.locale?.languageCode == 'ar'){
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/positiveAR.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/positiveAR.pdf');
 
      }else{
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/positiveEN.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/positiveEN.pdf');
 
      }
 
    }
-   else if(finalResultList[0]=="66".tr){
+   else if(finalResultLink[0]=="الحذر"){
      if (Get.locale?.languageCode == 'ar'){
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/positiveAR.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/positiveAR.pdf');
 
      }else{
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/positiveEN.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/positiveEN.pdf');
 
      }
 
    }
-   else if(finalResultList[0]=="DI"){
+   else if(finalResultLink[0]=="DI"){
      if (Get.locale?.languageCode == 'ar'){
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/positiveAR.pdf');
-
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/positiveAR.pdf');
+//https://dr-mohammad-taamnha.com/app_zaid/app_zaid/test/perResult/DI/positiveAR.pdf
      }else{
-       if (Get.locale?.languageCode == 'ar'){
-         launch('${LinkApp.pdfresult}${finalResultList[0]}/positiveAR.pdf');
 
-       }else{
-         launch('${LinkApp.pdfresult}${finalResultList[0]}/positiveEN.pdf');
+         launch('${LinkApp.pdfresult}${finalResultLink[0]}/positiveEN.pdf');
 
-       }
-     }
-
-   }
-   else if(finalResultList[0]=="DS"){
-     if (Get.locale?.languageCode == 'ar'){
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/positiveAR.pdf');
-
-     }else{
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/positiveEN.pdf');
 
      }
 
    }
-   else if(finalResultList[0]=="DC"){
+   else if(finalResultLink[0]=="DS"){
      if (Get.locale?.languageCode == 'ar'){
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/positiveAR.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/positiveAR.pdf');
 
      }else{
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/positiveEN.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/positiveEN.pdf');
 
      }
 
    }
-   else if(finalResultList[0]=="ID"){
+   else if(finalResultLink[0]=="DC"){
      if (Get.locale?.languageCode == 'ar'){
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/positiveAR.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/positiveAR.pdf');
 
      }else{
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/positiveEN.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/positiveEN.pdf');
 
      }
 
    }
-   else if(finalResultList[0]=="IS"){
+   else if(finalResultLink[0]=="ID"){
      if (Get.locale?.languageCode == 'ar'){
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/positiveAR.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/positiveAR.pdf');
 
      }else{
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/positiveEN.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/positiveEN.pdf');
 
      }
 
    }
-   else if(finalResultList[0]=="IC"){
+   else if(finalResultLink[0]=="IS"){
      if (Get.locale?.languageCode == 'ar'){
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/positiveAR.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/positiveAR.pdf');
 
      }else{
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/positiveEN.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/positiveEN.pdf');
 
      }
 
    }
-   else if(finalResultList[0]=="SD"){
+   else if(finalResultLink[0]=="IC"){
      if (Get.locale?.languageCode == 'ar'){
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/positiveAR.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/positiveAR.pdf');
 
      }else{
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/positiveEN.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/positiveEN.pdf');
 
      }
 
    }
-   else if(finalResultList[0]=="SI"){
+   else if(finalResultLink[0]=="SD"){
      if (Get.locale?.languageCode == 'ar'){
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/positiveAR.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/positiveAR.pdf');
 
      }else{
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/positiveEN.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/positiveEN.pdf');
 
      }
 
    }
-   else if(finalResultList[0]=="SC"){
+   else if(finalResultLink[0]=="SI"){
      if (Get.locale?.languageCode == 'ar'){
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/positiveAR.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/positiveAR.pdf');
 
      }else{
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/positiveEN.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/positiveEN.pdf');
 
      }
 
    }
-   else if(finalResultList[0]=="CD"){
+   else if(finalResultLink[0]=="SC"){
      if (Get.locale?.languageCode == 'ar'){
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/positiveAR.pdf');
-
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/positiveAR.pdf');
+//https://dr-mohammad-taamnha.com/app_zaid/app_zaid/test/perResult/SC/positiveAR.pdf
      }else{
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/positiveEN.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/positiveEN.pdf');
 
      }
 
    }
-   else if(finalResultList[0]=="CI"){
+   else if(finalResultLink[0]=="CD"){
      if (Get.locale?.languageCode == 'ar'){
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/positiveAR.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/positiveAR.pdf');
 
      }else{
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/positiveEN.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/positiveEN.pdf');
 
      }
 
    }
-   else if(finalResultList[0]=="CS"){
+   else if(finalResultLink[0]=="CI"){
      if (Get.locale?.languageCode == 'ar'){
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/positiveAR.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/positiveAR.pdf');
 
      }else{
-       launch('${LinkApp.pdfresult}${finalResultList[0]}/positiveEN.pdf');
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/positiveEN.pdf');
+
+     }
+
+   }
+   else if(finalResultLink[0]=="CS"){
+     if (Get.locale?.languageCode == 'ar'){
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/positiveAR.pdf');
+
+     }else{
+       launch('${LinkApp.pdfresult}${finalResultLink[0]}/positiveEN.pdf');
 
      }
 

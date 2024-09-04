@@ -21,22 +21,24 @@ class Language extends GetView<LocalControler> {
           children: [
             Text("1".tr,style: Theme.of(context).textTheme.displayLarge,),
             const SizedBox(height: 20,),
-            SingleChildScrollView(
-              scrollDirection:  Axis.horizontal,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+            Center(
+              child: SingleChildScrollView(
+                scrollDirection:  Axis.horizontal,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
 
-                children: [
-                  Container(
-                    width: screenWidth > 600?300:350,
+                  children: [
+                    Container(
+                      width: screenWidth > 600?300:350,
 
-                    child: CustomBottonLang(textbutton: "Ar",
-                      onPressed: (){
-                        controller.changeLang("ar");
-                        Get.toNamed(AppRoute.onboarding);
-                      },),
-                  ),
-                ],
+                      child: CustomBottonLang(textbutton: "Ar",
+                        onPressed: (){
+                          controller.changeLang("ar");
+                          Get.toNamed(AppRoute.onboarding);
+                        },),
+                    ),
+                  ],
+                ),
               ),
             ),
             const SizedBox(height: 20,),

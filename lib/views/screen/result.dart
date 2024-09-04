@@ -181,7 +181,9 @@ class ResultScreen extends StatelessWidget {
                                   children: [
                                     // controller.finalResultList[0]
                                     Text("${controller.finalResultList[0]}",
+                                      textAlign: TextAlign.center,
                                       style: TextStyle(
+
                                         color: Colors.black,
                                         fontFamily: 'Ciro',
                                         fontSize: 14,

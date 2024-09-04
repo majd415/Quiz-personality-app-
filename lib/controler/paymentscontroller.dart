@@ -24,8 +24,6 @@ class PaymentsControllerImp extends PaymentsController {
   List datacopn = [];
   List dataamount = [];
 List dataPaypal=[];
-  // late List<String> finalResultList;
-  // late List<double> finalResultPercentageList = [];
 
 
 
@@ -235,8 +233,8 @@ List dataPaypal=[];
 //   List datacopn = [];
 //   List dataamount = [];
 // List dataPaypal=[];
-//   late List<String> finalResultList;
-//   late List<double> finalResultPercentageList = [];
+//   // late List<String> finalResultList;
+//   // late List<double> finalResultPercentageList = [];
 //
 //   FlutterPaypalSDK? sdk;
 //
@@ -245,9 +243,9 @@ List dataPaypal=[];
 //     super.onInit();
 //     statusRequest = StatusRequest.loading;
 //     codediscount = TextEditingController();
-//     finalResultList = Get.arguments["finalResult"];
-//     finalResultPercentageList = Get.arguments["finalResultPercentage"];
-//     dataPaypal=Get.arguments["papalInfo"];
+//     // finalResultList = Get.arguments["finalResult"];
+//     // finalResultPercentageList = Get.arguments["finalResultPercentage"];
+//     // dataPaypal=Get.arguments["papalInfo"];
 //     print(onInit);
 //
 //     print(dataPaypal);
@@ -393,10 +391,7 @@ List dataPaypal=[];
 //       // );
 //       await addPeymentToDatabase();
 //       await Future.delayed(Duration(milliseconds: 500));
-//       Get.offNamed(AppRoute.result, arguments: {
-//         "finalResult": finalResultList,
-//         "finalResultPercentage": finalResultPercentageList,
-//       });
+//       Get.offNamed(AppRoute.testScreen, );
 //     }
 //   }
 //
@@ -411,10 +406,7 @@ List dataPaypal=[];
 //       if (payment != null && payment['status'] == 'success') {
 //         await addPeymentToDatabase();
 //         await Future.delayed(Duration(milliseconds: 500));
-//         Get.offNamed(AppRoute.result, arguments: {
-//           "finalResult": finalResultList,
-//           "finalResultPercentage": finalResultPercentageList,
-//         });
+//         Get.offNamed(AppRoute.testScreen,);
 //       } else {
 //         ScaffoldMessenger.of(context).showSnackBar(
 //           SnackBar(content: Text('Payment failed')),
@@ -460,10 +452,7 @@ List dataPaypal=[];
 //     }
 //   }
 // goptoresult(){
-//   Get.offNamed(AppRoute.result, arguments: {
-//     "finalResult": finalResultList,
-//     "finalResultPercentage": finalResultPercentageList,
-//   });
+//   Get.offNamed(AppRoute.testScreen);
 // }
 //   @override
 //   void onClose() {

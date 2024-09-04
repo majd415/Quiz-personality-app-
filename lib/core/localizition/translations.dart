@@ -74,7 +74,12 @@ class MyTranslations extends Translations{
       "67":"ادخل الى الاختبار  ",
       "68": "كود التحقق",
 "69":"ادخل الرمز الذي تم ارسالة الى البريد الاكتروني الذي قمت باضافتة ",
-  "70":"نتيجتك هي  "
+  "70":"نتيجتك هي  ",
+"71":"المسيطر",
+      "72":"المؤثر",
+      "73":"المستقر",
+
+      "74":"الحذر",
 
 
     },
@@ -153,7 +158,13 @@ class MyTranslations extends Translations{
   "67":"Go to test ",
       "68":"Code",
 "69":"add code that we send it to your email ",
-    "70":"Result Is"
+    "70":"Result Is",
+      "71":"Dominant",
+      "72":"Influencer",
+      "73":"Steady",
+
+      "74":"Cautious",
+
 
 
 

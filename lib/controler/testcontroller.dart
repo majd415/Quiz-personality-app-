@@ -33,6 +33,8 @@ class TestAppControllerImp extends TestAppController {
   late List<int> listdataPerD = [];
 
   List<String> finalResult = [];
+  List<String> finalResultLink = [];
+
   List<double> finalResultPercentage = [];
 
   late AddResult addResult= AddResult(Get.find());
@@ -122,74 +124,96 @@ print("percentLongestList${percentLongestList}");
 
   if ( difference >= 1 && difference <= 20) {
     if(longestList[0]==1 &&secondLongestList[0]==2  ){
-      finalResult.add("DI");
+      finalResult.add("DI\n Dominant-Influencer \n المسيطر -المؤثر ");
+      finalResultLink.add("DI");
       finalResultPercentage.add(percentLongestList);
       finalResultPercentage.add(percentSecondLongestList);
 
 
     }
    else if(longestList[0]==1 &&secondLongestList[0]==3  ){
-      finalResult.add("DS");
+      finalResult.add("DS\n Dominant-Steady \n المسيطر - المستقر");
+      finalResultLink.add("DS");
       finalResultPercentage.add(percentLongestList);
       finalResultPercentage.add(percentSecondLongestList);
 
     }
     else if(longestList[0]==1 &&secondLongestList[0]==4  ){
-      finalResult.add("DC");
+      finalResult.add("DC\n Dominant-Cautios \nالمسيطر - الحذر");
+      finalResultLink.add("DC");
+
       finalResultPercentage.add(percentLongestList);
       finalResultPercentage.add(percentSecondLongestList);
 
     }
     else if(longestList[0]==2 &&secondLongestList[0]==1  ){
-      finalResult.add("ID");
+      finalResult.add("ID\n Influencer-Dominant\nالمؤثر - المسيطر");
+      finalResultLink.add("ID");
+
       finalResultPercentage.add(percentLongestList);
       finalResultPercentage.add(percentSecondLongestList);
 
     }
     else if(longestList[0]==2 &&secondLongestList[0]==3  ){
-      finalResult.add("IS");
+      finalResult.add("IS\n Influencer-Steady\nالمؤثر - المستقر ");
+      finalResultLink.add("IS");
+
       finalResultPercentage.add(percentLongestList);
       finalResultPercentage.add(percentSecondLongestList);
 
     }
     else if(longestList[0]==2 &&secondLongestList[0]==4  ){
-      finalResult.add("IC");
+      finalResult.add("IC\n Influencer-Cautios\nالمؤثر-الحذر");
+      finalResultLink.add("IC");
+
       finalResultPercentage.add(percentLongestList);
       finalResultPercentage.add(percentSecondLongestList);
 
     }
     else if(longestList[0]==3 &&secondLongestList[0]==1  ){
-      finalResult.add("SD");
+      finalResult.add("SD\n Steady-Dominant\nالمستقر - المسيطر");
+      finalResultLink.add("SD");
+
       finalResultPercentage.add(percentLongestList);
       finalResultPercentage.add(percentSecondLongestList);
 
     }
     else if(longestList[0]==3 &&secondLongestList[0]==2  ){
-      finalResult.add("SI");
+      finalResult.add("SI\n Steady-Influencer\nالمستقر - المؤثر");
+      finalResultLink.add("SI");
+
       finalResultPercentage.add(percentLongestList);
       finalResultPercentage.add(percentSecondLongestList);
 
     }
     else if(longestList[0]==3 &&secondLongestList[0]==4  ){
-      finalResult.add("SC");
+      finalResult.add("SC\n Steady-Cautious\nالمستقر - الحذر");
+      finalResultLink.add("SC");
+
       finalResultPercentage.add(percentLongestList);
       finalResultPercentage.add(percentSecondLongestList);
 
     }
     else if(longestList[0]==4 &&secondLongestList[0]==1  ){
-      finalResult.add("CD");
+      finalResult.add("CD\n Cautious-Dominant \nالحذر - المسيطر");
+      finalResultLink.add("CD");
+
       finalResultPercentage.add(percentLongestList);
       finalResultPercentage.add(percentSecondLongestList);
 
     }
     else if(longestList[0]==4 &&secondLongestList[0]==2  ){
-      finalResult.add("CI");
+      finalResult.add("CI\n Cautious-Influencer\nالحذر -المؤثر");
+      finalResultLink.add("CI");
+
       finalResultPercentage.add(percentLongestList);
       finalResultPercentage.add(percentSecondLongestList);
 
     }
     else if(longestList[0]==4 &&secondLongestList[0]==3  ){
-      finalResult.add("CS");
+      finalResult.add("CS\n Cautious-Steady \nالحذر - المستقر");
+      finalResultLink.add("CS");
+
       finalResultPercentage.add(percentLongestList);
       finalResultPercentage.add(percentSecondLongestList);
 
@@ -198,18 +222,26 @@ print("percentLongestList${percentLongestList}");
   } else {
     if(longestList[0]==1){
   finalResult.add("63".tr);
+  finalResultLink.add("71".tr);
+
   finalResultPercentage.add(percentLongestList);
     }
    else if(longestList[0]==2){
       finalResult.add("64".tr);
+      finalResultLink.add("72".tr);
+
       finalResultPercentage.add(percentLongestList);
     }
     else if(longestList[0]==3){
       finalResult.add("65".tr);
+      finalResultLink.add("73".tr);
+
       finalResultPercentage.add(percentLongestList);
     }
     else if(longestList[0]==4){
       finalResult.add("66".tr);
+      finalResultLink.add("74".tr);
+
       finalResultPercentage.add(percentLongestList);
     }
   }
@@ -234,7 +266,7 @@ print("percentLongestList${percentLongestList}");
     statusRequest = StatusRequest.loading;
     update();
 
-    var response = await addResult.postData(mysServices.sharedPreferences.getString("id")!,"1",finalResult[0].toString(),"${finalResultPercentage[0].toString()}");
+    var response = await addResult.postData(mysServices.sharedPreferences.getString("id")!,"1",finalResultLink[0].toString(),"${finalResultPercentage[0].toString()}");
     statusRequest = handlingData(response);
 
     if (StatusRequest.success == statusRequest) {
@@ -280,8 +312,10 @@ print("percentLongestList${percentLongestList}");
               /////////
               getpaypaldatacontroller();
               Get.toNamed(AppRoute.result,arguments: {
+
                   "finalResult":finalResult,
                   "finalResultPercentage":finalResultPercentage,
+               "finalResultLink":finalResultLink,
                 "papalInfo":listpaypaldata
 
 
@@ -359,6 +393,7 @@ print(listpaypaldata);
     listdataPerD.clear();
     finalResult.clear();
     finalResultPercentage.clear();
+    finalResultLink.clear();
     audioPlayer = AudioPlayer();
     playAudio();
     audioPlayer.setReleaseMode(ReleaseMode.loop);  // ضبط التكرار التلقائي
