@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -34,7 +35,13 @@ class Language extends GetView<LocalControler> {
                       child: CustomBottonLang(textbutton: "Ar",
                         onPressed: (){
                           controller.changeLang("ar");
-                          Get.toNamed(AppRoute.onboarding);
+                          if(kIsWeb == true){
+                            Get.toNamed(AppRoute.login);
+
+                          }else{
+                            Get.toNamed(AppRoute.onboarding);
+
+                          }
                         },),
                     ),
                   ],

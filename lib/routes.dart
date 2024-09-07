@@ -79,7 +79,7 @@ List<GetPage<dynamic>>? routes=[
 
   GetPage(name: AppRoute.manageresultfile, page: ()=> const Manageresultfile() ),
 //paypalWebview
-//   GetPage(name: AppRoute.paypalWebview, page: ()=> PaypalWebview() ),
+  GetPage(name: AppRoute.paypalWebview, page: ()=> PaypalWebview() ),
 
   GetPage(name: AppRoute.manageAnswareAndQuestion, page: ()=> ManageAnswareAndQuestion() ),
   // homeScreen
