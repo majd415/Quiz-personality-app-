@@ -28,6 +28,7 @@ import 'package:zaid_mohamed_test/views/screen/language.dart';
 import 'package:zaid_mohamed_test/views/screen/onboardingScreen.dart';
 import 'package:zaid_mohamed_test/views/screen/paymentscreen.dart';
 import 'package:zaid_mohamed_test/views/screen/result.dart';
+import 'package:zaid_mohamed_test/views/screen/resultScreenProfile.dart';
 import 'package:zaid_mohamed_test/views/screen/testscreen.dart';
 
 import 'core/constant/routes.dart';
@@ -79,10 +80,12 @@ List<GetPage<dynamic>>? routes=[
 
   GetPage(name: AppRoute.manageresultfile, page: ()=> const Manageresultfile() ),
 //paypalWebview
-  GetPage(name: AppRoute.paypalWebview, page: ()=> PaypalWebview() ),
+//   GetPage(name: AppRoute.paypalWebview, page: ()=> PaypalWebview() ),
 
   GetPage(name: AppRoute.manageAnswareAndQuestion, page: ()=> ManageAnswareAndQuestion() ),
   // homeScreen
   GetPage(name: AppRoute.homeScreen, page: ()=> HomeScreen() ),
+
+  GetPage(name: AppRoute.resultprofile, page: ()=> ResultScreenProfile() ),
 
 ];

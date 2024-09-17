@@ -4,6 +4,7 @@ class AppRoute{
   static const String signup="/signup";
   static const String forgetPassword="/forgetpassword";
   static const String verefiyCode="/verefiycode";
+  static const String resultprofile="/resultprofile";
 
   static const String resetPassword="/resetpassword";
   static const String successSignUp="/successsignup";

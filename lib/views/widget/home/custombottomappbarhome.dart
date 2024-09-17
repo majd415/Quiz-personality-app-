@@ -22,17 +22,20 @@ class CustomBottomAppBarHome extends StatelessWidget {
                   int i=index>2?index-1:index;
                   return index==2? Spacer(
 
-                  ) :CustomButtonAppbar(
+                  ) :Flexible(
+                    flex: 4,
+                    child: CustomButtonAppbar(
 
 
 
-                    onPressed: (){
-                      controller.changePage(i);
-                    },
-                     iconData: controller.iconbuttonappbar[i],
-                    textbutton: controller.titlebuttonappbar[i],
-                    active: controller.currentpage==i?true:false,
+                      onPressed: (){
+                        controller.changePage(i);
+                      },
+                       iconData: controller.iconbuttonappbar[i],
+                      textbutton: controller.titlebuttonappbar[i],
+                      active: controller.currentpage==i?true:false,
 
+                    ),
                   );
 
 

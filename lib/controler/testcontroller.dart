@@ -266,7 +266,7 @@ print("percentLongestList${percentLongestList}");
     statusRequest = StatusRequest.loading;
     update();
 
-    var response = await addResult.postData(mysServices.sharedPreferences.getString("id")!,"1",finalResultLink[0].toString(),"${finalResultPercentage[0].toString()}");
+    var response = await addResult.postData(mysServices.sharedPreferences.getString("id")!,"1",finalResultLink[0].toString(),finalResultPercentage.length<2?"${finalResultPercentage[0]}":"${finalResultPercentage[0]}-${finalResultPercentage[1]}");
     statusRequest = handlingData(response);
 
     if (StatusRequest.success == statusRequest) {
