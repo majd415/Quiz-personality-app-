@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:zaid_mohamed_test/core/constant/routes.dart';
 
 
 import '../core/class/statusrequest.dart';
@@ -48,6 +49,17 @@ print("results home ${results}");
     update();
 
   }
+
+  gotoprofileresult(index){
+
+    Get.toNamed(AppRoute.resultprofile,arguments: {
+      "result":results[index]["personality_type"],
+    });
+    print(results[index]["personality_type"]);
+  }
+
+
+
 @override
   void onInit() async{
   await getResultdata();

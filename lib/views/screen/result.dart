@@ -14,7 +14,7 @@ class ResultScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     ResultControllerImp controller= Get.put(ResultControllerImp());
     final screenWidth = Get.context!.width;
-
+    int rendex ;
     return Scaffold(
         body:  ListView(
           children: [
@@ -94,7 +94,7 @@ class ResultScreen extends StatelessWidget {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
-                            ...List.generate(controller.finalResultPercentageList.length, (index) =>
+                            ...List.generate(controller.finalResultPercentageList.length, (indexx) =>
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
@@ -108,20 +108,30 @@ class ResultScreen extends StatelessWidget {
                                             percent: controller.finalResultPercentageList[index]/100,
                                             animation: true,
                                             animationDuration: 3000,
-                                            center: Row(
+                                            center: Column(
                                               mainAxisAlignment: MainAxisAlignment.center,
                                               children: [
-                                                Text(
-                                                  "${controller.finalResultPercentageList[index].toInt()}",
+                                                SizedBox(height: 12,),
+                                                Row(
+                                                  mainAxisAlignment: MainAxisAlignment.center,
+                                                  children: [
+                                                    Text(
+                                                      "${controller.finalResultPercentageList[indexx].toInt()}",
+                                                      style:
+                                                      new TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0,
+                                                          color: Colors.blue),
+                                                    ),
+                                                    new Icon(
+                                                      Icons.percent_outlined,
+                                                      size: 30.0,
+                                                      color: Colors.blue,
+                                                    ),
+                                                  ],
+                                                ),
+                                                Text("${controller.finalResultPercentageList.length==1?"":controller.finalResultLink[0][indexx]}",
                                                   style:
                                                   new TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0,
-                                                      color: Colors.blue),
-                                                ),
-                                                new Icon(
-                                                  Icons.percent_outlined,
-                                                  size: 30.0,
-                                                  color: Colors.blue,
-                                                ),
+                                                      color: Colors.blue),)
                                               ],
                                             ),
                                             backgroundColor: Colors.blueGrey,

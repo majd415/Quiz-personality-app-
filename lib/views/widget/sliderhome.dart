@@ -38,10 +38,10 @@ class SliderHome extends StatelessWidget {
             // NetworkImage(
             //     'https://cdn-images-1.medium.com/max/2000/1*GqdzzfB_BHorv7V2NV7Jgg.jpeg'),
 
-
-            AssetImage("assets/images/Rectangle13.png",),
-            AssetImage("assets/images/s2.jpg"),
             AssetImage("assets/images/s4.jpg"),
+            AssetImage("assets/images/s3.jpg",),
+            AssetImage("assets/images/s2.jpg"),
+
 
 
 

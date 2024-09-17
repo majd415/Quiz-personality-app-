@@ -160,42 +160,47 @@ class Home extends StatelessWidget {
                                ...List.generate(controller.results.length, (index) =>
                                 Padding(
                                   padding: const EdgeInsets.all(8.0),
-                                  child: Container(
-                                    width: 113,
-                                    height: 104,
-                                    decoration: BoxDecoration(
-                                      borderRadius : BorderRadius.only(
-                                        topLeft: Radius.circular(15),
-                                        topRight: Radius.circular(15),
-                                        bottomLeft: Radius.circular(15),
-                                        bottomRight: Radius.circular(15),
+                                  child: InkWell(
+                                    onTap: (){
+                                      controller.gotoprofileresult(index);
+                                    },
+                                    child: Container(
+                                      width: 113,
+                                      height: 104,
+                                      decoration: BoxDecoration(
+                                        borderRadius : BorderRadius.only(
+                                          topLeft: Radius.circular(15),
+                                          topRight: Radius.circular(15),
+                                          bottomLeft: Radius.circular(15),
+                                          bottomRight: Radius.circular(15),
+                                        ),
+                                        gradient : LinearGradient(
+                                            begin: Alignment(40.123234262925839e-17,-1),
+                                            end: Alignment(1,-6.123234262925839e-17),
+                                            colors: [Color.fromRGBO(22, 217, 227, 1),Color.fromRGBO(214, 227, 229, 1)]
+                                        ),
                                       ),
-                                      gradient : LinearGradient(
-                                          begin: Alignment(40.123234262925839e-17,-1),
-                                          end: Alignment(1,-6.123234262925839e-17),
-                                          colors: [Color.fromRGBO(22, 217, 227, 1),Color.fromRGBO(214, 227, 229, 1)]
+                                      child: Column(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        crossAxisAlignment: CrossAxisAlignment.center,
+                                        children: [
+                                          // ${controller.results[index]["results_percentage"]} %
+                                          Text("70".tr,
+                                            style: TextStyle(
+                                                color: Colors.black,
+                                                fontWeight: FontWeight.bold,
+                                                fontFamily: "Ciro",
+                                                fontSize: 15
+                                            ),),
+                                          Text("${controller.results[index]["personality_type"]}",
+                                            style: TextStyle(
+                                                color: Colors.black,
+                                                fontWeight: FontWeight.bold,
+                                                fontFamily: "Ciro",
+                                                fontSize: 15
+                                            ),),
+                                        ],
                                       ),
-                                    ),
-                                    child: Column(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      crossAxisAlignment: CrossAxisAlignment.center,
-                                      children: [
-                                        // ${controller.results[index]["results_percentage"]} %
-                                        Text("70".tr,
-                                          style: TextStyle(
-                                              color: Colors.black,
-                                              fontWeight: FontWeight.bold,
-                                              fontFamily: "Ciro",
-                                              fontSize: 15
-                                          ),),
-                                        Text("${controller.results[index]["personality_type"]}",
-                                          style: TextStyle(
-                                              color: Colors.black,
-                                              fontWeight: FontWeight.bold,
-                                              fontFamily: "Ciro",
-                                              fontSize: 15
-                                          ),),
-                                      ],
                                     ),
                                   ),
                                 ),),

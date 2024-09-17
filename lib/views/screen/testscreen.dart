@@ -40,7 +40,16 @@ class TestScreen extends StatelessWidget {
 
                   ),
                   // Figma Flutter Generator Rectangle13Widget - RECTANGLE
+                  SizedBox(height: 20,),
+                    Center(child: Text("28-${controller.count+1 }",style: TextStyle(
+                      color: Colors.black,
+                      fontFamily: 'Ciro',
+                      fontSize: 14,
 
+                      fontWeight: FontWeight.bold,
+                      height: 1.3,
+
+                    ),)),
                 ...List.generate(
                     controller.listquestiondata.length,
                         (index) =>Container(
