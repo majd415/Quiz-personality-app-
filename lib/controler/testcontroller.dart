@@ -111,7 +111,7 @@ class TestAppControllerImp extends TestAppController {
   List<int> secondLongestList = lists[1];
 
 
-  int totalLength = 27;
+  int totalLength = 28;
 
   // Calculate percentages for each list
   double percentLongestList = (longestList.length / totalLength) * 100;
@@ -122,7 +122,7 @@ print("percentLongestList${percentLongestList}");
     print("percentSecondLongestList${percentSecondLongestList}");
     print("difference${difference}");
 
-  if ( difference >= 1 && difference <= 20) {
+  if ( difference >= 0 && difference <= 20) {
     if(longestList[0]==1 &&secondLongestList[0]==2  ){
       finalResult.add("DI\n Dominant-Influencer \n المسيطر -المؤثر ");
       finalResultLink.add("DI");
@@ -287,6 +287,7 @@ print("percentLongestList${percentLongestList}");
   }
   getGroupAnsware(groupAnswar) async {
     // هي الطريقة لحتا ما كل مرة نعمل انستانس من كلاس crud ونمررو لهيك شوف ال initial_binding و
+
     selectedIndex = -1;
     // count++;
     transfarePos();
@@ -305,13 +306,13 @@ print("percentLongestList${percentLongestList}");
             ind=-1;
 
 
-            if(count==27){
+            if(count>28){
               calculateResult();
               //////
               addResultToDatabase();
               /////////
               getpaypaldatacontroller();
-              Get.toNamed(AppRoute.result,arguments: {
+              Get.offNamed(AppRoute.result,arguments: {
 
                   "finalResult":finalResult,
                   "finalResultPercentage":finalResultPercentage,
@@ -386,7 +387,7 @@ print(listpaypaldata);
     getGroupAnsware(groupAnswar);
     ind = -1;
     firstTrans = 1;
-     count=0;
+     count=1;
     listdataPerC.clear();
     listdataPerS.clear();
     listdataPerI.clear();

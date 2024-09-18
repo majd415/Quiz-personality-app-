@@ -4,6 +4,7 @@ import 'package:lottie/lottie.dart';
 import 'package:zaid_mohamed_test/core/class/handelingDataView.dart';
 
 import '../../controler/testcontroller.dart';
+import '../../core/constant/routes.dart';
 
 class TestScreen extends StatelessWidget {
   const TestScreen({super.key});
@@ -41,7 +42,7 @@ class TestScreen extends StatelessWidget {
                   ),
                   // Figma Flutter Generator Rectangle13Widget - RECTANGLE
                   SizedBox(height: 20,),
-                    Center(child: Text("28-${controller.count+1 }",style: TextStyle(
+                    Center(child: Text("28-${controller.count }",style: TextStyle(
                       color: Colors.black,
                       fontFamily: 'Ciro',
                       fontSize: 14,
@@ -150,7 +151,29 @@ class TestScreen extends StatelessWidget {
                       if(controller.ind==0 || controller.ind==1 ||controller.ind==2 ||controller.ind==3){
 
                         controller.nextAnsware();
-                        controller.getGroupAnsware(controller.groupAnswar);
+                        if(controller.groupAnswar<=28)
+                          controller.getGroupAnsware(controller.groupAnswar);
+                        if(controller.groupAnswar>28){
+                          controller. calculateResult();
+                          //////
+                          controller. addResultToDatabase();
+                          /////////
+                          controller. getpaypaldatacontroller();
+                          Get.offNamed(AppRoute.result,arguments: {
+
+                            "finalResult":controller.finalResult,
+                            "finalResultPercentage":controller.finalResultPercentage,
+                            "finalResultLink":controller.finalResultLink,
+                            "papalInfo":controller.listpaypaldata
+
+
+                          });
+
+
+
+                          controller.stopAudio();
+                        }
+
                         controller.transfarePos();
                         controller.addperResult(controller.ind);
                         controller.count++;
